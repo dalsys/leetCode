@@ -4,8 +4,6 @@ class TreeNode:
         self.val = x
         self.left = None
         self.right = None
-    def __str__(self):
-        return str(self.val)
 
 class Solution:
     def isSymmetric(self, root):
@@ -17,10 +15,6 @@ class Solution:
         level = [root]
 
         while level:
-            for i in level:
-                print(i, end = ' ')
-            print()
-
             for i in range(len(level)//2):
                 if level[i] == level[-1-i] == None:
                     continue
@@ -38,8 +32,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    print(type(None))
-
     solution = Solution()
     leaf1 = TreeNode(2)
     leaf1.left = TreeNode(3)
